@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BookController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    {% if book is not null %}
+    <h1>Book title : {{ book.title }}! ✅</h1>
+
+    <h2>Book description : {{ book.description }}</h2>
+    {% else %}
+    <h1>No book found with this id.</h1>
+    {% endif %}
+</div>
+{% endblock %}
